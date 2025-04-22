@@ -160,3 +160,14 @@ function buscarPorNombre() {
       alert("No se encontró el grupo en el array.");
     }
   }
+
+// Función para mostrar un elemento por índice
+function mostrarPorIndice() {
+    const indexStr = prompt("¿Qué índice quieres mostrar? (Número)");
+    const index = parseInt(indexStr);
+    if (isNaN(index) || index < 0 || index >= bandas.length) {
+      alert("Índice no válido.");
+      return;
+    }
+    alert("Elemento en el índice " + index + ": " + bandas[index]);
+  }
