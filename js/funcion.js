@@ -185,3 +185,17 @@ function mostrarTodos() {
     alert("Todos las bandas:\n" + todos);
   }
 
+  // Función para añadir bandas
+  function añadirBandas() {
+    let seguir = true;
+    while (seguir) {
+      const nuevaBanda = prompt("Introduce una banda para añadir al final (deja vacío para parar):");
+      if (nuevaBanda === null || nuevaBanda.trim() === "") {
+        seguir = false;
+      } else {
+        bandas.push(nuevaBanda.trim());
+      }
+    }
+    alert("Bandas añadidas.");
+  }
+
