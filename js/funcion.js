@@ -30,3 +30,10 @@ function contarAnimales(){
     console.log("Total animales: ", zoo.length);
 
 }
+function recorrerAnimales(){
+    const zoo = ["León", "Elefante", "Jirafa", "Tigre", "Cebra"];
+    console.log("Recorriendo el array: ")
+    for(let i=0 ;i<zoo.length; i++){
+        console.log("Animal en posicion " + i + ": " + zoo[i]);
+    }
+}
