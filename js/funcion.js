@@ -101,3 +101,13 @@ function borrarPrimero() {
       alert('El array está vacío.');
     }
   }
+
+// Función para borrar el último elemento
+function borrarUltimo() {
+    if (bandas.length > 0) {
+      const eliminado = bandas.pop();
+      alert('Elemento eliminado: ' + eliminado);
+    } else {
+      alert('El array está vacío.');
+    }
+  }
