@@ -111,3 +111,41 @@ function borrarUltimo() {
       alert('El array está vacío.');
     }
   }
+
+// Función para manipular un índice: borrar, cambiar o añadir
+function manipularPorIndice() {
+    const indexStr = prompt('¿Qué índice quieres manipular? (Número)');
+    const index = parseInt(indexStr);
+    if (isNaN(index) || index < 0 || index > bandas.length) {
+      alert('Índice no válido.');
+      return;
+    }
+    const accion = prompt(
+      "¿Qué quieres hacer?\n" +
+      "     1. Borrar en ese índice" +
+      "     2. Cambiar el elemento en ese índice " +
+      "     3. Añadir un elemento en ese índice "
+    );
+    if (accion === "1") {
+      if (index < bandas.length) {
+        const eliminado = bandas.splice(index,1)[0];
+        alert("Elemento eliminado: " + eliminado);
+      } else {
+        alert("Índice fuera de rango para eliminar.");
+      }
+    } else if (accion === "2") {
+      const nuevoNombre = prompt("Introduce el nuevo nombre para ese índice:");
+      if (index < bandas.length) {
+        bandas[index] = nuevoNombre;
+        alert("Elemento cambiado.");
+      } else {
+        alert("Índice fuera de rango para cambiar.");
+      }
+    } else if (accion === "3") {
+      const nuevoElemento = prompt("Introduce el nuevo elemento a añadir en ese índice:");
+      bandas.splice(index, 0, nuevoElemento);
+      alert("Elemento añadido.");
+    } else {
+      alert("Acción no válida.");
+    }
+  }
