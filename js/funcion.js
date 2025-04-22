@@ -37,3 +37,56 @@ function recorrerAnimales(){
         console.log("Animal en posicion " + i + ": " + zoo[i]);
     }
 }
+function recorrerRevesAnimales(){
+    const zoo = ["León", "Elefante", "Jirafa", "Tigre", "Cebra"];
+    console.log("Recorriendo el array al reves: ")
+    for(i = zoo.length ; i>0; i--){
+        console.log("Animal en posicion " + i + ": " + zoo[i]);
+    }
+}
+
+// funciones CRUD
+
+function mostrarMenu(){
+    let opcion = prompt(
+        "Seleccionar una opción: \n"+
+        "1. Borrar primer elemento\n"+
+        "2. Borrar último elemento\n" +
+        "3. Borrar, cambiar o añadir en un índice\n" +
+        "4. Buscar un grupo y obtener su índice\n" +
+        "5. Mostrar uno por índice\n" +
+        "6. Mostrar todos\n" +
+        "7. Añadir bandas\n" +
+        "8. Salir");
+    
+    switch (opcion) {
+        case '1':
+            borrarPrimero();
+            break;
+        case '2':
+            borrarUltimo();
+            break;
+        case '3':
+            manipularPorIndice();
+            break;
+        case '4':
+            buscarPorNombre();
+            break;
+        case '5':
+            mostrarPorIndice();
+            break;
+        case '6':
+            mostrarTodos();
+            break;
+        case '7':
+            añadirBandas();
+            break;
+        case '8':
+            alert('Fin del programa.');
+            return;
+        default:
+            alert('Opción no válida.');
+        }
+
+    mostrarMenu();
+}
