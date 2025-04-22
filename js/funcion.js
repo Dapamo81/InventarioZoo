@@ -46,6 +46,7 @@ function recorrerRevesAnimales(){
 }
 
 // funciones CRUD
+const bandas = ["The Beatles", "Pink Floyd", "Led Zeppelin", "Queen", "Nirvana", "The Rolling Stones"];
 
 function mostrarMenu(){
     let opcion = prompt(
@@ -90,3 +91,13 @@ function mostrarMenu(){
 
     mostrarMenu();
 }
+
+// Función para borrar el primer elemento
+function borrarPrimero() {
+    if (bandas.length > 0) {
+      const eliminado = bandas.shift();
+      alert('Elemento eliminado: ' + eliminado);
+    } else {
+      alert('El array está vacío.');
+    }
+  }
