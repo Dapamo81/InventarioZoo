@@ -149,3 +149,14 @@ function manipularPorIndice() {
       alert("Acción no válida.");
     }
   }
+
+  // Función para buscar un grupo y mostrar su índice
+function buscarPorNombre() {
+    const nombreBuscado = prompt("Introduce el nombre del grupo a buscar:");
+    const indice = bandas.indexOf(nombreBuscado);
+    if (indice !== -1) {
+      alert("El grupo " + nombreBuscado + " está en el índice: " + indice);
+    } else {
+      alert("No se encontró el grupo en el array.");
+    }
+  }
