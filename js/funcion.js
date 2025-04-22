@@ -171,3 +171,17 @@ function mostrarPorIndice() {
     }
     alert("Elemento en el índice " + index + ": " + bandas[index]);
   }
+
+// Función para mostrar todos los elementos usando forEach
+function mostrarTodos() {
+    if (bandas.length === 0) {
+      alert("El array está vacío.");
+      return;
+    }
+    let todos = "";
+    bandas.forEach((banda, i) => {
+      todos += i + ": " + banda + "\n";
+    });
+    alert("Todos las bandas:\n" + todos);
+  }
+
